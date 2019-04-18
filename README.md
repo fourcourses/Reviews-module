@@ -1,32 +1,17 @@
-# Available Table: Review Module
+# Review Module
+Component to handle the review module of the restaurant page.
 
+# Set Up
 
+# CRUD API Endpoints
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
-
+| Endpoint                                | Type   | Operation                      |
+|-----------------------------------------|--------|--------------------------------|
+| `/api/restaurants/:id/reviews`          | GET    | Get review for a restaurant    |
+| `/api/restaurants/reviews`              | POST   | Add review for a restaurant    |
+| `/api/restaurants/:id/reviews`          | PUT    | Update review for a restaurant |
+| `/api/restaurants/:id/reviews`          | DELETE | Delete review for a restaurant |
+| `/api/restaurants/:id/filters`          | GET    | Get review for a restaurant    |
+| `/api/restaurants/filters`              | POST   | Add review for a restaurant    |
+| `/api/restaurants/:id/filters`          | PUT    | Update review for a restaurant |
+| `/api/restaurants/:id/filters`          | DELETE | Delete review for a restaurant |

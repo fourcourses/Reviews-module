@@ -22,7 +22,7 @@ class Review {
 }
 
 const makeReview = () => {
-  const numberOfReviews = Math.floor(Math.random() * 1000 + 1);
+  const numberOfReviews = Math.floor(Math.random() * 20 + 1);
   const results = [];
   for (let i = 0; i < numberOfReviews; i++) {
     const review = new Review();
@@ -43,7 +43,7 @@ const filterWords = () => {
 const mockData = [];
 
 const createMockData = () => {
-  for (let i = 0; i < 101; i++) {
+  for (let i = 0; i < 100001; i++) {
     const restaurant = {
       name: faker.company.companyName(),
       reviews: makeReview(),
