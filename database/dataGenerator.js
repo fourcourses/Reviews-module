@@ -8,21 +8,21 @@ class Review {
     this.initials = faker.name.firstName().slice(0, 1) + faker.name.lastName().slice(0, 1),
     this.profilePic = faker.internet.avatar(),
     this.city = faker.address.city(),
-    this.review = faker.lorem.sentences(),
-    this.noise = Math.floor(Math.random() * 3 + 1),
-    this.createdAt = faker.date.past(),
-    this.recommended = Math.floor(Math.random() * 60 + 40),
-    this.foodRating = Math.ceil(Math.random() * 4 + 1),
-    this.ambianceRating = Math.ceil(Math.random() * 4 + 1),
-    this.serviceRating = Math.ceil(Math.random() * 4 + 1),
-    this.valueRating = Math.ceil(Math.random() * 4 + 1),
-    this.overallRating = (this.foodRating + this.ambianceRating + this.serviceRating + this.valueRating)/4,
-    this.reviewCount = Math.ceil(Math.random() * 50)
+    this.review = faker.lorem.sentences()
+    // this.noise = Math.floor(Math.random() * 3 + 1),
+    // this.createdAt = faker.date.past(),
+    // this.recommended = Math.floor(Math.random() * 60 + 40),
+    // this.foodRating = Math.ceil(Math.random() * 4 + 1),
+    // this.ambianceRating = Math.ceil(Math.random() * 4 + 1),
+    // this.serviceRating = Math.ceil(Math.random() * 4 + 1),
+    // this.valueRating = Math.ceil(Math.random() * 4 + 1),
+    // this.overallRating = (this.foodRating + this.ambianceRating + this.serviceRating + this.valueRating)/4,
+    // this.reviewCount = Math.ceil(Math.random() * 50)
   }
 }
 
 const makeReview = () => {
-  const numberOfReviews = Math.floor(Math.random() * 20 + 1);
+  const numberOfReviews = Math.floor(Math.random() * 10 + 1);
   const results = [];
   for (let i = 0; i < numberOfReviews; i++) {
     const review = new Review();
@@ -43,11 +43,11 @@ const filterWords = () => {
 const mockData = [];
 
 const createMockData = () => {
-  for (let i = 0; i < 100001; i++) {
+  for (let i = 0; i < 100; i++) {
     const restaurant = {
-      name: faker.company.companyName(),
+      name: i,
       reviews: makeReview(),
-      filters: filterWords()
+      //filters: filterWords()
     };
     mockData.push(restaurant);
   }
