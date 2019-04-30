@@ -1,5 +1,6 @@
 public/dist/bundle.js
 generated
 generateddata.txt.gz
-
 node_modules
+reviews.csv
+

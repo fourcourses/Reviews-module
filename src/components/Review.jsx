@@ -33,7 +33,7 @@ class Review extends React.Component {
   setStars() {
     const { review } = this.props;
     const { stars } = this.state;
-    let initialRating = review.overallRating;
+    let initialRating = review.overall_rating;
     for (let i = 0; i < 5; i++) {
       initialRating > 0.5
         ? stars.push("https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redStar.png") 
@@ -122,7 +122,7 @@ class Review extends React.Component {
             <span id="userCity">{review.city}</span>
             <div id="userReviewsContainer">
               <span className="commentIcon" />
-              <span id="reviewCountText">&nbsp; {review.reviewCount} {reviewPluralCase}</span>
+              <span id="reviewCountText">&nbsp; {review.reviewcount} {reviewPluralCase}</span>
             </div>
           </div>
 
@@ -137,13 +137,13 @@ class Review extends React.Component {
               </div>
               <div id="reviewRatingsContainer">
                 <span className="reviewRatingCategory">Overall </span>
-                <span className="reviewRatingNumber">{review.overallRating} &nbsp;</span>
+                <span className="reviewRatingNumber">{review.overall_rating} &nbsp;</span>
                 <span className="reviewRatingCategory">&#8226; Food </span>
-                <span className="reviewRatingNumber">{review.foodRating} &nbsp;</span>
+                <span className="reviewRatingNumber">{review.food_rating} &nbsp;</span>
                 <span className="reviewRatingCategory">&#8226; Service </span>
-                <span className="reviewRatingNumber">{review.serviceRating} &nbsp;</span>
+                <span className="reviewRatingNumber">{review.service_rating} &nbsp;</span>
                 <span className="reviewRatingCategory">&#8226; Ambiance </span>
-                <span className="reviewRatingNumber">{review.ambianceRating}</span>
+                <span className="reviewRatingNumber">{review.ambiance_rating}</span>
               </div>
             </div>
 
@@ -186,15 +186,15 @@ export default Review;
 
 Review.propTypes = {
   review: PropTypes.shape({
-    ambianceRating: PropTypes.number.isRequired,
-    serviceRating: PropTypes.number.isRequired,
-    foodRating: PropTypes.number.isRequired,
-    overallRating: PropTypes.number.isRequired,
+    ambiance_rating: PropTypes.number.isRequired,
+    service_rating: PropTypes.number.isRequired,
+    food_rating: PropTypes.number.isRequired,
+    overall_rating: PropTypes.number.isRequired,
     createdAt: PropTypes.string.isRequired,
     recommended: PropTypes.number.isRequired,
     noise: PropTypes.number.isRequired,
     review: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
-    reviewCount: PropTypes.number.isRequired,
+    reviewcount: PropTypes.number.isRequired,
   }).isRequired,
 };
