@@ -1,4 +1,5 @@
 public/dist/bundle.js
+<<<<<<< HEAD
 node_modules/axios/CHANGELOG.md
 node_modules/axios/dist/axios.js
 node_modules/axios/dist/axios.map
@@ -16527,3 +16528,10 @@ node_modules/xmlchars/xmlns/1.0/ed3.js
 node_modules/xmlchars/xmlns/1.0/ed3.js.map
 generated
 generateddata.txt.gz
+=======
+generated
+generateddata.txt.gz
+node_modules
+reviews.csv
+
+>>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed

@@ -13,7 +13,12 @@
     "seed": "node ./database/seed.js",
     "test": "jest",
     "test:watch": "jest --watch",
+<<<<<<< HEAD
     "test:coverage": "jest --coverage --colors"
+=======
+    "test:coverage": "jest --coverage --colors",
+    "post.seed": "psql postgres < database/postgreSQL/database.sql"
+>>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
@@ -25,20 +30,44 @@
     "babel-plugin-styled-components": "^1.10.0",
     "body-parser": "^1.18.3",
     "css-loader": "^2.1.1",
+<<<<<<< HEAD
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "express": "^4.16.4",
     "file-loader": "^3.0.1",
     "jest": "^24.5.0",
     "jquery": "^3.3.1",
+=======
+    "csv-write-stream": "^2.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "express": "^4.16.4",
+    "express-cassandra": "^2.3.0",
+    "file-loader": "^3.0.1",
+    "jest": "^24.5.0",
+    "jquery": "^3.4.0",
+>>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
     "moment": "^2.24.0",
     "mongodb": "^3.2.2",
     "mongoose": "^5.4.20",
     "mongoose-sequence": "^5.0.1",
+<<<<<<< HEAD
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-icons": "^3.5.0",
     "style-loader": "^0.23.1",
+=======
+    "newrelic": "^5.7.0",
+    "pg": "^7.10.0",
+    "pg-hstore": "^2.3.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-icons": "^3.5.0",
+    "redis": "^2.8.0",
+    "sequelize": "^5.7.5",
+    "style-loader": "^0.23.1",
+    "throng": "^4.0.0",
+>>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
