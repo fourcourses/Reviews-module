@@ -17,7 +17,7 @@ function start() {
   const sequelize = require('./database/postgreSQL/connection.js')
   const express = require('express');
   const redis = require('redis')
-  var client = redis.createClient()
+  var client = redis.createClient(6379,"13.57.181.156")
   const app = express();
   client.on("error", (err) => {
     console.log("Error" + err)
