@@ -1,3 +1,4 @@
+var newRelic = require('./password.js')
 'use strict'
 /**
  * New Relic agent configuration.
@@ -13,7 +14,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: 'd4675c6334e0efda8dd20d6384adafc1e657a41d',
+  license_key: newRelic,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing

@@ -11,6 +11,7 @@ throng({
   lifetime: Infinity
 }, start)
 
+app.use('/', express.static(__dirname + '/public/dist'));
 
 function start() {
   const sequelize = require('./database/postgreSQL/connection.js')
@@ -21,7 +22,6 @@ function start() {
   client.on("error", (err) => {
     console.log("Error" + err)
   })
-  app.use('/', express.static(__dirname + '/public/dist'));
   app.use('/restaurants/:id', express.static(__dirname + '/public/dist'));
   var getReviews = (req, res) => {
     //res.send('hello from getReviews')
