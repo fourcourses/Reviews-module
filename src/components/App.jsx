@@ -70,11 +70,7 @@ class App extends React.Component {
       .then(res => {
         const rating = [];
         for (let i = 0; i < res.data.length; i++) {
-<<<<<<< HEAD
-          rating.push(res.data[i].overallRating);
-=======
           rating.push(res.data[i].overall_rating);
->>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
         }
         this.setState({
           allReviews: res.data,
@@ -84,19 +80,11 @@ class App extends React.Component {
           allRatings: rating,
           recommended: res.data[5].recommended,
           ratings: {
-<<<<<<< HEAD
-            totalAverage: getAverage(res.data, 'overallRating'),
-            foodAverage: getAverage(res.data, 'foodRating'),
-            serviceAverage: getAverage(res.data, 'serviceRating'),
-            ambianceAverage: getAverage(res.data, 'ambianceRating'),
-            valueAverage: getAverage(res.data, 'valueRating'),
-=======
             totalAverage: getAverage(res.data, 'overall_rating'),
             foodAverage: getAverage(res.data, 'food_rating'),
             serviceAverage: getAverage(res.data, 'service_rating'),
             ambianceAverage: getAverage(res.data, 'ambiance_rating'),
             valueAverage: getAverage(res.data, 'value_rating'),
->>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
             noise: getAverage(res.data, 'noise')
           }
         }, () => {
@@ -165,11 +153,7 @@ class App extends React.Component {
 
   filterReviewsByRating(target) {
     const { allReviews } = this.state;
-<<<<<<< HEAD
-    const filtered = allReviews.filter(review => review.overallRating === target);
-=======
     const filtered = allReviews.filter(review => review.overall_rating === target);
->>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
     this.setState({
       reviews: filtered.slice(0, 20),
       currentRestReviews: filtered,
@@ -181,15 +165,6 @@ class App extends React.Component {
   sortReviewsBySelect(sortMethod) {
     let { currentRestReviews, allReviews } = this.state;
     if (sortMethod === 'Highest') {
-<<<<<<< HEAD
-      currentRestReviews = allReviews.sort((a, b) => b.overallRating - a.overallRating);
-    } else if (sortMethod === 'Lowest') {
-      currentRestReviews = allReviews.sort((a, b) => a.overallRating - b.overallRating);
-    } else {
-      currentRestReviews = allReviews.sort((a, b) => b.dinedDate - a.dinedDate);
-    }
-    this.setState({ 
-=======
       currentRestReviews = allReviews.sort((a, b) => b.overall_rating - a.overall_rating);
     } else if (sortMethod === 'Lowest') {
       currentRestReviews = allReviews.sort((a, b) => a.overall_rating - b.overall_rating);
@@ -197,7 +172,6 @@ class App extends React.Component {
       currentRestReviews = allReviews.sort((a, b) => b.dinedDate - a.dinedDate);
     }
     this.setState({
->>>>>>> 0df4c234c5474ddd87a21e3d10c0e2696d7a54ed
       reviews: currentRestReviews.slice(0, 20),
       currentRestReviews: currentRestReviews,
     });
